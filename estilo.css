@@ -1,0 +1,767 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #090708;
+    color: #eee7e7;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.portada {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(9, 7, 8, 0.65),
+            rgba(9, 7, 8, 0.94)
+        ),
+        url("imagenes/foto1.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-portada {
+    max-width: 850px;
+    padding: 40px;
+    animation: aparecer 2s ease;
+}
+
+.pequeno {
+    letter-spacing: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #c9a9ad;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: clamp(65px, 10vw, 130px);
+    font-weight: normal;
+    line-height: 0.9;
+}
+
+h1 span {
+    font-style: italic;
+    color: #dcaeb6;
+}
+
+.linea {
+    width: 80px;
+    height: 1px;
+    background: #dcaeb6;
+    margin: 35px auto;
+}
+
+.fecha {
+    font-family: Arial, sans-serif;
+    letter-spacing: 4px;
+    font-size: 13px;
+    color: #dcaeb6;
+}
+
+.intro {
+    max-width: 550px;
+    margin: 30px auto;
+    line-height: 1.8;
+    color: #c8c0c1;
+}
+
+.boton {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 15px 35px;
+
+    border: 1px solid #cda7ae;
+
+    color: #eee7e7;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: 0.4s;
+}
+
+.boton:hover {
+    background: #cda7ae;
+    color: #100b0d;
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.carta-seccion {
+    padding: 130px 20px;
+
+    display: flex;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #241719 0%,
+            #090708 65%
+        );
+}
+
+.carta {
+    max-width: 750px;
+    text-align: center;
+}
+
+.etiqueta {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #bc9299;
+
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: clamp(38px, 6vw, 70px);
+
+    font-weight: normal;
+
+    margin-bottom: 35px;
+}
+
+.carta p:not(.etiqueta):not(.firma) {
+    font-size: 17px;
+
+    line-height: 2;
+
+    color: #c9c1c2;
+
+    margin-bottom: 25px;
+}
+
+.firma {
+    margin-top: 50px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #d4b2b8;
+}
+
+.firma span {
+    font-size: 25px;
+    font-style: italic;
+}
+
+
+/* =========================
+   CONTADOR
+========================= */
+
+.tiempo {
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background: #0e0a0c;
+}
+
+.subtitulo {
+    color: #a79b9e;
+    margin-bottom: 50px;
+}
+
+.contador {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.tiempo-caja {
+    width: 145px;
+
+    padding: 30px 10px;
+
+    border: 1px solid #342629;
+
+    background: #130e10;
+
+    transition: 0.4s;
+}
+
+.tiempo-caja:hover {
+    transform: translateY(-8px);
+
+    border-color: #9e727a;
+}
+
+.tiempo-caja span {
+    display: block;
+
+    font-size: 45px;
+
+    color: #d5afb5;
+}
+
+.tiempo-caja small {
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #87797c;
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.recuerdos {
+    padding: 130px 7%;
+
+    text-align: center;
+
+    background: #090708;
+}
+
+.galeria {
+    max-width: 1100px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    grid-auto-rows: 280px;
+
+    gap: 15px;
+}
+
+.foto {
+    overflow: hidden;
+
+    position: relative;
+}
+
+.foto.grande {
+    grid-column: span 2;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.7s;
+}
+
+.foto:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   CANCIÓN
+========================= */
+
+.cancion {
+    padding: 140px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #2b181d,
+            #090708 70%
+        );
+}
+
+.disco {
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    margin: 0 auto 45px;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #171113 0px,
+            #171113 3px,
+            #080708 4px,
+            #080708 7px
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 0 50px rgba(200, 150, 160, 0.15);
+
+    animation: girar 8s linear infinite;
+}
+
+.disco-centro {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #d0a8af;
+
+    border: 12px solid #191113;
+}
+
+.cancion h2 {
+    margin-bottom: 20px;
+}
+
+.cancion p:not(.etiqueta) {
+    max-width: 500px;
+
+    margin: 10px auto;
+
+    line-height: 1.8;
+
+    color: #bdb1b3;
+}
+
+audio {
+    margin-top: 35px;
+
+    width: min(500px, 90%);
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.cosas {
+    padding: 130px 7%;
+
+    text-align: center;
+
+    background: #0d090b;
+}
+
+.tarjetas {
+    max-width: 1100px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.tarjeta {
+    padding: 40px 25px;
+
+    text-align: left;
+
+    border: 1px solid #292024;
+
+    background: #120d0f;
+
+    transition: 0.4s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+
+    border-color: #88616a;
+}
+
+.numero {
+    color: #a4777f;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.tarjeta h3 {
+    font-size: 23px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+}
+
+.tarjeta p {
+    color: #9f9496;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            rgba(9, 7, 8, 0.55),
+            rgba(9, 7, 8, 0.95)
+        ),
+        url("imagenes/foto5.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.final-contenido {
+    max-width: 700px;
+}
+
+.corazon-grande {
+    font-size: 100px;
+
+    color: #d0a6ad;
+
+    animation:
+        latido 1.8s ease-in-out infinite;
+
+    margin-bottom: 20px;
+}
+
+.final h2 {
+    margin-bottom: 25px;
+}
+
+.final p {
+    color: #c3b7b9;
+
+    line-height: 1.8;
+
+    margin: 10px 0;
+}
+
+.final h3 {
+    font-size: 28px;
+
+    font-weight: normal;
+
+    font-style: italic;
+
+    margin-top: 30px;
+
+    color: #d5afb6;
+}
+
+.separador {
+    width: 60px;
+
+    height: 1px;
+
+    background: #9f747c;
+
+    margin: 35px auto;
+}
+
+.fecha-final {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-top: 35px !important;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #060506;
+
+    color: #665b5e;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   CORAZONES
+========================= */
+
+.corazones {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+    overflow: hidden;
+}
+
+.corazones span {
+    position: absolute;
+
+    bottom: -50px;
+
+    color: rgba(210, 160, 170, 0.15);
+
+    font-size: 25px;
+
+    animation: subir 12s linear infinite;
+}
+
+.corazones span:nth-child(1) {
+    left: 5%;
+    animation-delay: 1s;
+}
+
+.corazones span:nth-child(2) {
+    left: 15%;
+    animation-delay: 4s;
+}
+
+.corazones span:nth-child(3) {
+    left: 25%;
+    animation-delay: 7s;
+}
+
+.corazones span:nth-child(4) {
+    left: 35%;
+    animation-delay: 2s;
+}
+
+.corazones span:nth-child(5) {
+    left: 45%;
+    animation-delay: 8s;
+}
+
+.corazones span:nth-child(6) {
+    left: 55%;
+    animation-delay: 5s;
+}
+
+.corazones span:nth-child(7) {
+    left: 65%;
+    animation-delay: 3s;
+}
+
+.corazones span:nth-child(8) {
+    left: 75%;
+    animation-delay: 9s;
+}
+
+.corazones span:nth-child(9) {
+    left: 85%;
+    animation-delay: 6s;
+}
+
+.corazones span:nth-child(10) {
+    left: 95%;
+    animation-delay: 2s;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes subir {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes latido {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+
+        grid-auto-rows: 220px;
+    }
+
+    .foto.grande {
+        grid-column: span 2;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .contenido-portada {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 300px;
+    }
+
+    .foto.grande {
+        grid-column: span 1;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .tiempo-caja {
+        width: 130px;
+    }
+
+}
